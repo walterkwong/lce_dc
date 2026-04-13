@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LifeCourseEpidemiology"
+version = "0.2.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+dependencies = [
+    "click>=8.0",
+    "numpy<2",
+    "torch>=2.0",
+    "tsai>=0.3.9",
+    "optuna>=3.0",
+    "xgboost>=2.0",
+    "scikit-learn>=1.4",
+    "shap>=0.44",
+    "seaborn>=0.13",
+    "matplotlib>=3.8",
+    "pandas>=2.0",
+    "plotly>=5.20",
+    "kaleido>=0.2",
+    "ipykernel",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4",
+    "black>=24",
+    "pytest>=8",
+]
+
+[project.scripts]
+lce = "lce.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+src = ["src"]
+line-length = 100
+target-version = "py310"
+cache-dir = ".ruff-cache"
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+extend-safe-fixes = ["I001"]
+extend-select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-local-folder = ["lce"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
