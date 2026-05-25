@@ -1,7 +1,7 @@
 # Life Course Epidemiology Deep Learning Architecture Study
 
 > **Final Year Project, University of Bristol**
-> Supervised by **Dr Juliette Unwin** (University of Bristol) and **Helen Coupland** (Imperial College). 
+> Supervised by **Dr Juliette Unwin** (University of Bristol) and **Helen Coupland** (Imperial College). Parts of this work were completed in collaboration with Jeanelle Leong (University of Bristol) and Isobelle Clemmens (University of Bristol).
 
 This project builds upon the research and code from:
 > Coupland et al. (2024). *Deep learning for life course epidemiology.*
